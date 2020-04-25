@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider with Javascript</title>
+    <style>
+        *{
+            overflow-x: hidden;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="container">
+        <h1>Gulfam Yaqoob</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est qui rerum nihil repudiandae, odio animi harum iste quam. Necessitatibus velit eaque<br>
+             distinctio enim voluptatibus incidunt ea earum, voluptate similique dolore.</p>
+    </div>
+    <div id="container1">
+        <h1>Sir Maaz</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est qui rerum nihil repudiandae, odio animi harum iste quam. Necessitatibus velit eaque<br>
+             distinctio enim voluptatibus incidunt ea earum, voluptate similique dolore.</p>
+    </div>    
+    <div id="container2">
+        <h1>Umer Butt</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est qui rerum nihil repudiandae, odio animi harum iste quam. Necessitatibus velit eaque<br>
+             distinctio enim voluptatibus incidunt ea earum, voluptate similique dolore.</p>
+    </div>
+    <div id="container3">
+        <h1>Sir Aamir Yaqoob</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est qui rerum nihil repudiandae, odio animi harum iste quam. Necessitatibus velit eaque<br>
+             distinctio enim voluptatibus incidunt ea earum, voluptate similique dolore.</p>
+    </div>
+</div>
+
+<button onclick="getElementById('container'),effect()">1st Image</button>
+<button onclick="getElementById('container1').style.left='0',effect1()">2nd Image</button>
+<button onclick="getElementById('container2').style.left='0',effect2()">3rd Image</button>
+<button onclick="getElementById('container3').style.left='0',effect3()">4th Image</button>
+</body>
+
+<script>
+
+document.getElementById("main").style.height="90vh"
+document.getElementById("main").style.position="relative"
+document.getElementById("main").style.width="100%"
+// document.getElementById("main").style.border="1px solid"
+
+
+
+document.getElementById("container").style.height="90vh"
+document.getElementById("container").style.backgroundImage="url(./img/a.jpg)"
+document.getElementById("container").style.backgroundSize="100% 100%"
+document.getElementById("container").style.position="absolute"
+document.getElementById("container").style.width="100%"
+document.getElementById("container1").style.top="0%"
+document.getElementById("container").style.left="0%"
+document.getElementById("container").style.transition="1s"
+
+document.getElementById("container1").style.height="90vh"
+document.getElementById("container1").style.backgroundImage="url(./img/b.jpg)"
+document.getElementById("container1").style.backgroundSize="100% 100%"
+document.getElementById("container1").style.position="absolute"
+document.getElementById("container1").style.width="100%"
+document.getElementById("container1").style.top="0%"
+document.getElementById("container1").style.left="100%"
+document.getElementById("container1").style.transition="1s"
+
+document.getElementById("container2").style.height="90vh"
+document.getElementById("container2").style.backgroundImage="url(./img/c.jpg)"
+document.getElementById("container2").style.backgroundSize="100% 100%"
+document.getElementById("container2").style.position="absolute"
+document.getElementById("container2").style.width="100%"
+document.getElementById("container2").style.top="0%"
+document.getElementById("container2").style.left="100%"
+document.getElementById("container2").style.transition="1s"
+
+document.getElementById("container3").style.height="90vh"
+document.getElementById("container3").style.backgroundImage="url(./img/d.jpg)"
+document.getElementById("container3").style.backgroundSize="100% 100%"
+document.getElementById("container3").style.position="absolute"
+document.getElementById("container3").style.width="100%"
+document.getElementById("container3").style.left="100%"
+document.getElementById("container3").style.transition="1s"
+
+function effect(){
+    document.getElementById("container").style.transition="1s"
+    document.getElementById("container").style.zIndex="1"
+    document.getElementById("container1").style.zIndex="0"
+    document.getElementById("container2").style.zIndex="0"
+    document.getElementById("container3").style.zIndex="0"
+    
+}
+
+function effect1(){
+    document.getElementById("container1").style.transition="1s"
+    document.getElementById("container1").style.zIndex="1"
+    document.getElementById("container").style.zIndex="0"
+    document.getElementById("container2").style.zIndex="0"
+    document.getElementById("container3").style.zIndex="0"
+
+}
+
+function effect2(){
+    document.getElementById("container2").style.transition="1s"
+    document.getElementById("container2").style.zIndex="1"
+    document.getElementById("container").style.zIndex="0"
+    document.getElementById("container1").style.zIndex="0"
+    document.getElementById("container3").style.zIndex="0"
+}
+
+function effect3(){
+    document.getElementById("container3").style.transition="1s"
+    document.getElementById("container3").style.zIndex="1"
+    document.getElementById("container2").style.zIndex="0"
+    document.getElementById("container").style.zIndex="0"
+    document.getElementById("container1").style.zIndex="0"
+}
+</script>
+</html>
